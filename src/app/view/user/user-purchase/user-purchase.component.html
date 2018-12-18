@@ -1,0 +1,21 @@
+<div class="container">
+    <div *ngFor="let item of mypurchase" class="card-deck">
+      <div class="card">
+        <h5 class="card-header">{{item.product.name}}</h5>
+        <div class="card-body">
+          <div class="row">
+            <div class="col-4 text-left">Price</div>
+            <div class="col-8 text-right">{{item.product.price}}</div>
+            <div class="w-100"></div>
+            <div class="col-4 text-left">Quantity</div>
+            <div class="col-8 text-right">{{item.quantity}} </div>
+            <div class="w-100"></div>
+            <div class="col-4 text-left">Total</div>
+            <div class="col-8 text-right">{{item.total}}</div>
+            <div class="w-100"></div>
+          </div>
+          <a routerLink="/product/{{item.product.id}}" class="btn btn-info">View Product</a>
+        </div>
+      </div>
+    </div>
+  </div>

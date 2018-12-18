@@ -1,0 +1,28 @@
+<div class="container">
+    <div *ngFor="let row of rows" class="card-deck">
+        <div *ngFor="let product of products" class="card border-secondary mb-4" style="max-width: 18rem;">
+            <div class="card-body text-secondary col-md-7 col-sm-12 col-xs-12">
+                <a routerLink="{{product.id}}" routerLinkActive="active">
+                    <img class="card-img-top" src="{{product.img[0]}}" alt="Card image cap">
+                </a>
+            </div>
+            <div class="card-header">
+                <div class="name">{{product.name}} &nbsp; 
+                        <a href="#" data-toggle="tooltip" title="Some tooltip text!">More</a>
+
+                        <!-- Generated markup by the plugin -->
+                        <div class="tooltip bs-tooltip-top" role="tooltip">
+                          <div class="arrow"></div>
+                          <div class="tooltip-inner">
+                            Product Description will be added here
+                          </div>
+                        </div>
+
+                </div>
+
+            </div>
+        </div>
+    </div>
+</div>
+
+<router-outlet></router-outlet>
